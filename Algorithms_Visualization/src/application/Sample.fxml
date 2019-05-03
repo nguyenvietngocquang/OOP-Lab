@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ChoiceBox fx:id="choiceBox" layoutX="78.0" layoutY="82.0" prefWidth="150.0" />
+      <TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1033.0" text="Algorithm Visualization" textFill="#137dd1">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="641.0" prefWidth="1000.0" style="-fx-background-size: 100% 100%; -fx-background-image: url('file:/D:/2018/20182/OOP_LAB/OOP-Lab/Image/background2.jpg');">
+               <children>
+                  <Button fx:id="queueBtn" layoutX="197.0" layoutY="255.0" mnemonicParsing="false" onAction="#initialize" opacity="0.58" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #0B6854; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Queue" textAlignment="CENTER" textFill="#fffb03">
+                     <font>
+                        <Font name="Garamond Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="arrayListBtn" layoutX="197.0" layoutY="322.0" mnemonicParsing="false" opacity="0.58" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #0B6854; -fx-background-radius: 20 20 20 20; -fx-border-radius: 20 20 20 20; -fx-border-color: white;" text="ArrayList" textAlignment="CENTER" textFill="#fffb03">
+                     <font>
+                        <Font name="Garamond Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="hashTableBtn" layoutX="197.0" layoutY="389.0" mnemonicParsing="false" opacity="0.58" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #0B6854; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="HashTable" textAlignment="CENTER" textFill="#fffb03">
+                     <font>
+                        <Font name="Garamond Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="130.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Easy Algorithms" textAlignment="CENTER" wrappingWidth="301.6708984375">
+                     <font>
+                        <Font name="Gabriola" size="49.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="0.6193181818181819" centerY="0.7475728155339805" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#ff9800" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Pane blendMode="LIGHTEN" layoutX="450.0" layoutY="144.0" prefHeight="302.0" prefWidth="398.0" style="-fx-background-image: url('file:/D:/2018/20182/OOP_LAB/OOP-Lab/Image/background.gif');" />
+                  <Label fx:id="lb" layoutX="270.0" layoutY="472.0" prefHeight="21.0" prefWidth="93.0" textFill="#c31717" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </TitledPane>
    </children>
 </AnchorPane>
