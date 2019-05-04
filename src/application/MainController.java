@@ -12,21 +12,21 @@ import javafx.scene.layout.AnchorPane;
 public class MainController implements Initializable {
 	
 	@FXML
-	private AnchorPane pane1, pane2;
+	private AnchorPane pane;
 	
 	public void queue() throws IOException {
-		AnchorPane child1 = FXMLLoader.load(getClass().getResource("Queue1.fxml"));
-		pane1.getChildren().setAll(child1);
-		AnchorPane child2 = FXMLLoader.load(getClass().getResource("Test.fxml"));
-		pane2.getChildren().setAll(child2);
+		AnchorPane child = FXMLLoader.load(getClass().getResource("Queue.fxml"));
+		pane.getChildren().setAll(child);
 	}
 	
-	public void hashtable() {
-		
+	public void hashtable() throws IOException {
+		AnchorPane child = FXMLLoader.load(getClass().getResource("HashTable.fxml"));
+		pane.getChildren().setAll(child);
 	}
 	
-	public void arraylist() {
-		
+	public void arraylist() throws IOException {
+		AnchorPane child = FXMLLoader.load(getClass().getResource("ArrayList.fxml"));
+		pane.getChildren().setAll(child);
 	}
 	
 	public void exit() {

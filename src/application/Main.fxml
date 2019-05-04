@@ -8,21 +8,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane fx:id="pane1" prefHeight="600.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="600.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="185.0" mnemonicParsing="false" onAction="#queue" prefHeight="60.0" prefWidth="230.0" text="Queue" textAlignment="CENTER">
                <font>
                   <Font name=".VnVogue Medium" size="35.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="274.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" text="Hash Table" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="274.0" mnemonicParsing="false" onAction="#hashtable" prefHeight="60.0" prefWidth="230.0" text="Hash Table" textAlignment="CENTER">
                <font>
                   <Font name=".VnVogue Medium" size="35.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="366.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" text="Array List" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="366.0" mnemonicParsing="false" onAction="#arraylist" prefHeight="60.0" prefWidth="230.0" text="Array List" textAlignment="CENTER">
                <font>
                   <Font name=".VnVogue Medium" size="35.0" />
                </font>
@@ -39,7 +39,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="pane2" layoutX="415.0" layoutY="144.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="415.0" layoutY="144.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="184.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <image>
