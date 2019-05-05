@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="338.0" style="-fx-background-color: #355664;">
+         <children>
+            <Button layoutX="93.0" layoutY="239.0" mnemonicParsing="false" onAction="#queue" prefHeight="39.0" prefWidth="207.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DD5656; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Queue" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="93.0" layoutY="305.0" mnemonicParsing="false" onAction="#arraylist" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="ArrayList" textFill="#fffefe">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="93.0" layoutY="368.0" mnemonicParsing="false" onAction="#hashtable" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="HashTable" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="93.0" layoutY="434.0" mnemonicParsing="false" onAction="#exit" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #DD5656; -fx-background-radius: 2em; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Quit" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
+            <Pane blendMode="LIGHTEN" layoutY="547.0" prefHeight="252.0" prefWidth="338.0" style="-fx-background-image: url('file:D:/2018/20182/OOP_LAB/OOP-Lab/Image/background.gif');" />
+            <Pane prefHeight="800.0" prefWidth="81.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="778.0" prefWidth="35.0" text="ALGORITHMS" textFill="#dd5656" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS" size="52.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="337.0" prefHeight="576.0" prefWidth="765.0">
+         <children>
+            <Label layoutX="120.0" layoutY="33.0" prefHeight="64.0" prefWidth="463.0" text="Create new Array first" textFill="#e13a3a">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="165.0" prefHeight="46.0" prefWidth="160.0" text="Array Size:" textFill="#cc4040">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="228.0" prefHeight="46.0" prefWidth="133.0" text="Array Values" textFill="#cc4040">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combobox" layoutX="277.0" layoutY="165.0" onAction="#comboChanged" prefHeight="46.0" prefWidth="97.0" />
+            <TextField fx:id="textField" alignment="CENTER" layoutX="277.0" layoutY="236.0" prefHeight="46.0" prefWidth="338.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnReady" layoutX="538.0" layoutY="306.0" mnemonicParsing="false" onAction="#getText" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #355664; -fx-border-color: white;" text="Ready!" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="337.0" layoutY="576.0" prefHeight="64.0" prefWidth="765.0" style="-fx-background-color: #DD5656;">
+         <children>
+            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="39.0" prefWidth="533.0" text="Made by" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.5006553079947575" layoutX="337.0" layoutY="640.0" prefHeight="160.0" prefWidth="765.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #DD5656;">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="125.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Image/quang.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="141.0" layoutY="23.0" prefHeight="21.0" prefWidth="221.0" text="Nguyen Viet Ngoc Quang" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="58.0" prefHeight="21.0" prefWidth="221.0" text="20163315" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="97.0" prefHeight="21.0" prefWidth="221.0" text="\@changtraidangthattinh" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #DD5656;">
+               <children>
+                  <ImageView fitHeight="156.0" fitWidth="133.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Image/hung.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="154.0" layoutY="21.0" prefHeight="21.0" prefWidth="207.0" text="Phung The Hung" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font></Label>
+                  <Label layoutX="154.0" layoutY="58.0" prefHeight="21.0" prefWidth="207.0" text="20161984" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font></Label>
+                  <Label layoutX="154.0" layoutY="94.0" prefHeight="21.0" prefWidth="207.0" text="\@changtraicodon" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
