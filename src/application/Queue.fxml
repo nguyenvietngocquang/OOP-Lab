@@ -11,13 +11,13 @@
 
 <AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QueueController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@../../resource/night.jpg" />
-         </image>
-      </ImageView>
       <AnchorPane fx:id="pane1" layoutX="29.0" layoutY="129.0" prefHeight="600.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../resource/queue.jpg" />
+               </image>
+            </ImageView>
             <Button layoutX="120.0" layoutY="130.0" mnemonicParsing="false" onAction="#enqueue" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: YELLOW;" text="Enqueue" textFill="RED" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="130.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
