@@ -12,27 +12,32 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="185.0" mnemonicParsing="false" onAction="#queue" prefHeight="60.0" prefWidth="230.0" text="Queue" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="220.0" mnemonicParsing="false" onAction="#queue" prefHeight="40.0" prefWidth="210.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DD5656; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Queue" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="220.0">
                <font>
-                  <Font name=".VnVogue Medium" size="35.0" />
+                  <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="274.0" mnemonicParsing="false" onAction="#hashtable" prefHeight="60.0" prefWidth="230.0" text="Hash Table" textAlignment="CENTER">
+            <Button layoutX="105.0" layoutY="300.0" mnemonicParsing="false" onAction="#arraylist" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Array List" textFill="#fffefe" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="300.0">
                <font>
-                  <Font name=".VnVogue Medium" size="35.0" />
+                  <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="366.0" mnemonicParsing="false" onAction="#arraylist" prefHeight="60.0" prefWidth="230.0" text="Array List" textAlignment="CENTER">
+            <Button layoutX="105.0" layoutY="380.0" mnemonicParsing="false" onAction="#hashtable" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Hash Table" textFill="WHITE" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="380.0">
                <font>
-                  <Font name=".VnVogue Medium" size="35.0" />
+                  <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="456.0" mnemonicParsing="false" onAction="#exit" prefHeight="60.0" prefWidth="230.0" text="Exit" textAlignment="CENTER">
+            <Button layoutX="105.0" layoutY="460.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #DD5656; -fx-background-radius: 2em; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Exit" textFill="WHITE" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="460.0">
                <font>
-                  <Font name=".VnVogue Medium" size="35.0" />
+                  <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="76.0" prefHeight="60.0" prefWidth="230.0" text="Choose option" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="40.0" text="ALGORITHMS" textAlignment="CENTER" textFill="#dd5656" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Comic Sans MS" size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="100.0" prefHeight="60.0" prefWidth="230.0" text="Choose option" textAlignment="CENTER" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="100.0">
                <font>
                   <Font name="Ink Free" size="35.0" />
                </font>

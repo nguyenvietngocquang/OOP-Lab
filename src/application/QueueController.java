@@ -10,8 +10,7 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -32,98 +31,103 @@ public class QueueController implements Initializable {
 	@FXML
 	private AnchorPane pane, pane1, pane2;
 	@FXML
-	private Button enbtn, debtn;
-	@FXML
 	private TextField entf;
 	@FXML
 	private Label delb, qty;
 	
 	public void enqueue() {
-		if ((entf.getText() != "") && (queue.size()<11)) {
+		if ((!entf.getText().equals("")) && (isInt(entf.getText())) && (queue.size()<11)) {
 			en(queue.size()+1);
 			qty.setText(Integer.toString(queue.size()));
 		} else entf.clear();
 	}
 	
 	public void en(int number) {
-		if (entf.getText() != "") {
-			Image image = new Image("/dairycattle.jpg");
-	        ImageView imageView = new ImageView(image);
-			Label label = new Label(entf.getText(), imageView);
-			entf.clear();
-			queue.addLast(label);
-			pane2.getChildren().add(label);
-			label.resize(80, 80);
-			label.setFont(new Font(20));
-			label.setAlignment(Pos.CENTER);
-			label.setTextFill(Color.web("#000000"));
-			label.setBackground(new Background(new BackgroundFill(Color.web("#F5DEB3"), CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
-			label.setLayoutX(75);
-			label.setLayoutY(-100);
-			
-			Polyline polyline = new Polyline();
-			switch (number) {
-			case 1: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 300.0,
-					400.0, 300.0,
-					400.0, 500.0}); break;
-			case 2: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 300.0,
-					400.0, 300.0,
-					400.0, 400.0}); break;
-			case 3: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 300.0,
-					400.0, 300.0}); break;
-			case 4: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 300.0,
-					300.0, 300.0}); break;
-			case 5: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 300.0}); break;
-			case 6: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0,
-					200.0, 400.0}); break;
-			case 7: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					200.0, 500.0}); break;
-			case 8: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0,
-					100.0, 500.0}); break;
-			case 9: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 500.0}); break;
-			case 10: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 400.0}); break;
-			case 11: polyline.getPoints().addAll(new Double[] {
-					0.0, 0.0,
-					0.0, 300.0}); break;
-			}
-			
-			PathTransition transition = new PathTransition();
-			transition.setDuration(Duration.seconds(3));
-			transition.setNode(label);
-			transition.setPath(polyline);
-			transition.play();
+		Image image = new Image("/dairycattle.jpg");
+        ImageView imageView = new ImageView(image);
+		Label label = new Label(entf.getText(), imageView);
+		entf.clear();
+		queue.addLast(label);
+		pane2.getChildren().add(label);
+		label.setFont(new Font("Tahoma", 20));
+		label.setContentDisplay(ContentDisplay.TOP);
+		label.setGraphicTextGap(0);
+		label.setBackground(new Background(new BackgroundFill(Color.web("#F5DEB3"), CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+		label.setLayoutX(105);
+		label.setLayoutY(-100);
+		
+		PathTransition transition = new PathTransition();
+		Polyline polyline = new Polyline();
+		switch (number) {
+		case 1: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 300.0,
+				400.0, 300.0,
+				400.0, 500.0});
+		transition.setDuration(Duration.seconds(3)); break;
+		case 2: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 300.0,
+				400.0, 300.0,
+				400.0, 400.0});
+		transition.setDuration(Duration.seconds(2.8)); break;
+		case 3: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 300.0,
+				400.0, 300.0});
+		transition.setDuration(Duration.seconds(2.6)); break;
+		case 4: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 300.0,
+				300.0, 300.0});
+		transition.setDuration(Duration.seconds(2.4)); break;
+		case 5: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 300.0});
+		transition.setDuration(Duration.seconds(2.2)); break;
+		case 6: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0,
+				200.0, 400.0});
+		transition.setDuration(Duration.seconds(2)); break;
+		case 7: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				200.0, 500.0});
+		transition.setDuration(Duration.seconds(1.8)); break;
+		case 8: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0,
+				100.0, 500.0});
+		transition.setDuration(Duration.seconds(1.6)); break;
+		case 9: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 500.0});
+		transition.setDuration(Duration.seconds(1.4)); break;
+		case 10: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 400.0});
+		transition.setDuration(Duration.seconds(1.2)); break;
+		case 11: polyline.getPoints().addAll(new Double[] {
+				0.0, 0.0,
+				0.0, 300.0});
+		transition.setDuration(Duration.seconds(1)); break;
 		}
+		
+		transition.setNode(label);
+		transition.setPath(polyline);
+		transition.play();
 	}
 	
 	public void dequeue() {
@@ -135,7 +139,7 @@ public class QueueController implements Initializable {
 			TranslateTransition transition = new TranslateTransition();
 			transition.setDuration(Duration.seconds(1));
 			transition.setNode(label);
-			transition.setToX(375);
+			transition.setToX(360);
 			transition.setToY(700);
 			transition.play();
 			
@@ -151,43 +155,43 @@ public class QueueController implements Initializable {
 		transition.setNode(queue.get(number));
 		switch (number) {
 		case 0:
-			transition.setToX(375);
+			transition.setToX(360);
 			transition.setToY(460);
 			break;
 		case 1:
-			transition.setToX(375);
+			transition.setToX(360);
 			transition.setToY(360);
 			break;
 		case 2:
-			transition.setToX(375);
+			transition.setToX(360);
 			transition.setToY(260);
 			break;
 		case 3:
-			transition.setToX(275);
+			transition.setToX(260);
 			transition.setToY(260);
 			break;
 		case 4:
-			transition.setToX(175);
+			transition.setToX(160);
 			transition.setToY(260);
 			break;
 		case 5:
-			transition.setToX(175);
+			transition.setToX(160);
 			transition.setToY(360);
 			break;
 		case 6:
-			transition.setToX(175);
+			transition.setToX(160);
 			transition.setToY(460);
 			break;
 		case 7:
-			transition.setToX(75);
+			transition.setToX(60);
 			transition.setToY(460);
 			break;
 		case 8:
-			transition.setToX(-25);
+			transition.setToX(-40);
 			transition.setToY(460);
 			break;
 		case 9:
-			transition.setToX(-25);
+			transition.setToX(-40);
 			transition.setToY(360);
 			break;
 		}
@@ -197,6 +201,14 @@ public class QueueController implements Initializable {
 	public void back() throws IOException {
 		AnchorPane child = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		pane.getChildren().setAll(child);
+	}
+	
+	static boolean isInt(String str) {
+		for (int i=0; i<str.length(); i++) {
+			if ((i==0) && (str.charAt(i) == '-')) continue;
+			if (!Character.isDigit(str.charAt(i))) return false;
+		}
+		return true;
 	}
 
 	@Override
