@@ -52,7 +52,7 @@ public class QueueController implements Initializable {
 		label.setFont(new Font("Tahoma", 20));
 		label.setContentDisplay(ContentDisplay.TOP);
 		label.setGraphicTextGap(0);
-		label.setBackground(new Background(new BackgroundFill(Color.web("#F5DEB3"), CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+		label.setBackground(new Background(new BackgroundFill(Color.web("#F1C40F"), CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
 		label.setLayoutX(105);
 		label.setLayoutY(-100);
 		
