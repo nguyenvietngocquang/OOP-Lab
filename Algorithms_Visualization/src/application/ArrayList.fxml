@@ -52,16 +52,10 @@
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="valueDeleteField" layoutX="190.0" layoutY="538.0" prefHeight="0.0" prefWidth="97.0" />
+            <TextField fx:id="indexDeleteField" layoutX="190.0" layoutY="538.0" prefHeight="0.0" prefWidth="97.0" />
             <TextField fx:id="valueAddField" layoutX="222.0" layoutY="276.0" prefHeight="21.0" prefWidth="97.0" />
             <Label layoutX="172.0" layoutY="281.0" text="Value:" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <StackPane layoutX="396.0" layoutY="59.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
-      <StackPane layoutX="704.0" layoutY="16.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
-      <StackPane layoutX="704.0" layoutY="110.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
-      <StackPane layoutX="704.0" layoutY="203.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
-      <StackPane layoutX="704.0" layoutY="297.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
-      <StackPane layoutX="704.0" layoutY="392.0" prefHeight="87.0" prefWidth="81.0" style="-fx-background-color: #60d92e;" />
    </children>
 </AnchorPane>
