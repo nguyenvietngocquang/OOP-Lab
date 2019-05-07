@@ -88,11 +88,6 @@
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="70.0" layoutY="540.0" mnemonicParsing="false" onAction="#function" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: RED;" text="Hash Function" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="540.0">
-               <font>
-                  <Font name="Comic Sans MS Bold Italic" size="20.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="pane2" layoutX="455.0" layoutY="83.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #FCF3CF;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">

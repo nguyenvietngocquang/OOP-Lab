@@ -56,16 +56,36 @@ public class HashTableController implements Initializable {
 				int index = splitInt(number);
 				indexlb.setText(Integer.toString(index));
 				switch (index) {
-				case 0: in(0, number, 10); break;
-				case 1: in(1, number, 69); break;
-				case 2: in(2, number, 128); break;
-				case 3: in(3, number, 187); break;
-				case 4: in(4, number, 246); break;
-				case 5: in(5, number, 305); break;
-				case 6: in(6, number, 364); break;
-				case 7: in(7, number, 423); break;
-				case 8: in(8, number, 482); break;
-				case 9: in(9, number, 541); break;
+				case 0: index0.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index0.setTextFill(Color.WHITE);
+					in(0, number, 10); break;
+				case 1: index1.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index1.setTextFill(Color.WHITE);
+					in(1, number, 69); break;
+				case 2: index2.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index2.setTextFill(Color.WHITE);
+					in(2, number, 128); break;
+				case 3: index3.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index3.setTextFill(Color.WHITE);
+					in(3, number, 187); break;
+				case 4: index4.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index4.setTextFill(Color.WHITE);
+					in(4, number, 246); break;
+				case 5: index5.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index5.setTextFill(Color.WHITE);
+					in(5, number, 305); break;
+				case 6: index6.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index6.setTextFill(Color.WHITE);
+					in(6, number, 364); break;
+				case 7: index7.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index7.setTextFill(Color.WHITE);
+					in(7, number, 423); break;
+				case 8: index8.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index8.setTextFill(Color.WHITE);
+					in(8, number, 482); break;
+				case 9: index9.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index9.setTextFill(Color.WHITE);
+					in(9, number, 541); break;
 				}
 			} else {
 				indexlb.setText("Exists");
@@ -90,6 +110,8 @@ public class HashTableController implements Initializable {
 			label.setFont(new Font("Tahoma", 15));
 			label.setPrefSize(49, 49);
 			label.setAlignment(Pos.CENTER);
+			label.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(90), Insets.EMPTY)));
+			label.setTextFill(Color.WHITE);
 			label.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, new CornerRadii(90), new BorderWidths(2))));
 			label.setLayoutY(Y);
 			switch (hash[index].size()) {
@@ -169,16 +191,36 @@ public class HashTableController implements Initializable {
 				indexlb.setText(Integer.toString(index));
 				removetf.clear();
 				switch (index) {
-				case 0: re(0, number); break;
-				case 1: re(1, number); break;
-				case 2: re(2, number); break;
-				case 3: re(3, number); break;
-				case 4: re(4, number); break;
-				case 5: re(5, number); break;
-				case 6: re(6, number); break;
-				case 7: re(7, number); break;
-				case 8: re(8, number); break;
-				case 9: re(9, number); break;
+				case 0: index0.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index0.setTextFill(Color.WHITE);
+					re(0, number); break;
+				case 1: index1.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index1.setTextFill(Color.WHITE);
+					re(1, number); break;
+				case 2: index2.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index2.setTextFill(Color.WHITE);
+					re(2, number); break;
+				case 3: index3.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index3.setTextFill(Color.WHITE);
+					re(3, number); break;
+				case 4: index4.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index4.setTextFill(Color.WHITE);
+					re(4, number); break;
+				case 5: index5.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index5.setTextFill(Color.WHITE);
+					re(5, number); break;
+				case 6: index6.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index6.setTextFill(Color.WHITE);
+					re(6, number); break;
+				case 7: index7.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index7.setTextFill(Color.WHITE);
+					re(7, number); break;
+				case 8: index8.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index8.setTextFill(Color.WHITE);
+					re(8, number); break;
+				case 9: index9.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, javafx.geometry.Insets.EMPTY)));
+					index9.setTextFill(Color.WHITE);
+					re(9, number); break;
 				}
 			} else {
 				indexlb.setText("Doesn\'t exists");
@@ -216,11 +258,6 @@ public class HashTableController implements Initializable {
 	
 	public void back() throws IOException {
 		AnchorPane child = FXMLLoader.load(getClass().getResource("Main.fxml"));
-		pane.getChildren().setAll(child);
-	}
-	
-	public void function() throws IOException {
-		AnchorPane child = FXMLLoader.load(getClass().getResource("HashFunction.fxml"));
 		pane.getChildren().setAll(child);
 	}
 	
