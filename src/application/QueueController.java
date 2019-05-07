@@ -29,7 +29,7 @@ public class QueueController implements Initializable {
 	private LinkedList<Label> queue = new LinkedList<Label>();
 	
 	@FXML
-	private AnchorPane pane, pane1, pane2;
+	private AnchorPane pane, pane2;
 	@FXML
 	private TextField entf;
 	@FXML
@@ -139,8 +139,7 @@ public class QueueController implements Initializable {
 			TranslateTransition transition = new TranslateTransition();
 			transition.setDuration(Duration.seconds(1));
 			transition.setNode(label);
-			transition.setToX(360);
-			transition.setToY(700);
+			transition.setByY(500);
 			transition.play();
 			
 			for (int i = 0; i < queue.size(); i++) {
@@ -154,46 +153,16 @@ public class QueueController implements Initializable {
 		transition.setDuration(Duration.seconds(1));
 		transition.setNode(queue.get(number));
 		switch (number) {
-		case 0:
-			transition.setToX(360);
-			transition.setToY(460);
-			break;
-		case 1:
-			transition.setToX(360);
-			transition.setToY(360);
-			break;
-		case 2:
-			transition.setToX(360);
-			transition.setToY(260);
-			break;
-		case 3:
-			transition.setToX(260);
-			transition.setToY(260);
-			break;
-		case 4:
-			transition.setToX(160);
-			transition.setToY(260);
-			break;
-		case 5:
-			transition.setToX(160);
-			transition.setToY(360);
-			break;
-		case 6:
-			transition.setToX(160);
-			transition.setToY(460);
-			break;
-		case 7:
-			transition.setToX(60);
-			transition.setToY(460);
-			break;
-		case 8:
-			transition.setToX(-40);
-			transition.setToY(460);
-			break;
-		case 9:
-			transition.setToX(-40);
-			transition.setToY(360);
-			break;
+		case 0: transition.setByY(100); break;
+		case 1: transition.setByY(100); break;
+		case 2: transition.setByX(100); break;
+		case 3: transition.setByX(100); break;
+		case 4: transition.setByY(-100); break;
+		case 5: transition.setByY(-100); break;
+		case 6: transition.setByX(100); break;
+		case 7: transition.setByX(100); break;
+		case 8: transition.setByY(100); break;
+		case 9: transition.setByY(100); break;
 		}
 		transition.play();
 	}

@@ -40,7 +40,7 @@
                   <Font name="Comic Sans MS" size="40.0" />
                </font>
             </Label>
-            <Button layoutX="260.0" layoutY="540.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: RED;" text="Back" textFill="WHITE" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="540.0">
+            <Button layoutX="260.0" layoutY="540.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: RED;" text="Back" textFill="WHITE" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="540.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="20.0" />
                </font>
@@ -55,7 +55,7 @@
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="390.0" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: YELLOW;" text="Quantity" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="390.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="390.0" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: ORANGE;" text="Quantity" textAlignment="CENTER" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="390.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>

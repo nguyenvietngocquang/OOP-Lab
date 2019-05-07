@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #AED6F1;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="220.0" mnemonicParsing="false" onAction="#queue" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: RED; -fx-background-radius: 20 20 20 20; -fx-border-color: WHITE; -fx-border-radius: 20 20 20 20;" text="Queue" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="220.0">
                <font>
@@ -42,15 +42,112 @@
                   <Font name="Ink Free" size="35.0" />
                </font>
             </Label>
+            <Line endX="396.0" endY="596.0" layoutX="396.0" startX="396.0" strokeWidth="4.0" AnchorPane.leftAnchor="396.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="400.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="400.0" prefHeight="120.0" prefWidth="600.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label alignment="CENTER" layoutY="20.0" prefHeight="80.0" prefWidth="600.0" text="Object-Oriented Languages and Theory" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Harrington" size="30.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="515.0" layoutY="300.0" prefHeight="480.0" prefWidth="600.0" style="-fx-background-color: #F9E79F;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Label layoutX="210.0" layoutY="20.0" prefHeight="40.0" prefWidth="250.0" text="Nguyen Viet Ngoc Quang" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="@../../resource/rakan.jpg" />
+                  <Image url="@../../resource/quang.JPG" />
+               </image></ImageView>
+            <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="420.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="240.0">
+               <image>
+                  <Image url="@../../resource/hung.jpg" />
                </image>
             </ImageView>
+            <Line endX="596.0" endY="240.0" layoutY="240.0" startY="240.0" strokeWidth="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="240.0" />
+            <Line endX="180.0" endY="240.0" layoutX="180.0" startX="180.0" strokeWidth="4.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="0.0" />
+            <Line endX="596.0" strokeWidth="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Line endX="416.0" endY="476.0" layoutX="416.0" layoutY="240.0" startX="416.0" startY="240.0" strokeWidth="4.0" AnchorPane.leftAnchor="416.0" AnchorPane.topAnchor="240.0" />
+            <Hyperlink contentDisplay="CENTER" layoutX="350.0" layoutY="120.0" onAction="#goFacebook1" prefHeight="40.0" prefWidth="220.0" text="nguyenvietngoc.quang" textAlignment="CENTER" textFill="BLUE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink contentDisplay="CENTER" layoutX="350.0" layoutY="180.0" onAction="#goGitHub1" prefHeight="40.0" prefWidth="220.0" text="nguyenvietngocquang" textAlignment="CENTER" textFill="BLUE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Label contentDisplay="CENTER" layoutX="260.0" layoutY="180.0" prefHeight="40.0" prefWidth="80.0" text="GitHub" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font name="Monospaced Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="260.0" layoutY="120.0" prefHeight="40.0" prefWidth="80.0" text="Facebook" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Monospaced Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="210.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="180.0">
+               <image>
+                  <Image url="@../../resource/github.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="210.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="120.0">
+               <image>
+                  <Image url="@../../resource/facebook.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="210.0" layoutY="72.0" prefHeight="40.0" prefWidth="100.0" text="20163315" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="290.0" layoutY="300.0" prefHeight="40.0" prefWidth="100.0" text="20161984" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="70.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="360.0">
+               <image>
+                  <Image url="@../../resource/facebook.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="70.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="420.0">
+               <image>
+                  <Image url="@../../resource/github.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="120.0" layoutY="360.0" prefHeight="40.0" prefWidth="100.0" text="Facebook" textAlignment="CENTER" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="360.0">
+               <font>
+                  <Font name="Monospaced Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="120.0" layoutY="420.0" prefHeight="40.0" prefWidth="100.0" text="GitHub" textAlignment="CENTER" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="420.0">
+               <font>
+                  <Font name="Monospaced Bold" size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink contentDisplay="CENTER" layoutX="210.0" layoutY="420.0" onAction="#goGitHub2" prefHeight="40.0" prefWidth="180.0" text="Ti-amo" textAlignment="CENTER" textFill="BLUE" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="420.0">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink contentDisplay="CENTER" layoutX="210.0" layoutY="360.0" onAction="#goFacebook2" prefHeight="40.0" prefWidth="180.0" text="thehung.phung.712" textAlignment="CENTER" textFill="BLUE" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="360.0">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Label alignment="CENTER_RIGHT" layoutX="210.0" layoutY="260.0" prefHeight="40.0" prefWidth="180.0" text="Phung The Hung" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="260.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
