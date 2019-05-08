@@ -9,12 +9,17 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Rectangle;
 
 public class MainController implements Initializable {
 	
 	@FXML
 	private AnchorPane pane;
+	@FXML
+	private Rectangle Facebook1, Facebook2, GitHub1, GitHub2;
 	
 	public void queue() throws IOException {
 		AnchorPane child = FXMLLoader.load(getClass().getResource("Queue.fxml"));
@@ -65,6 +70,11 @@ public class MainController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+		Image facebook = new Image("/facebook.png");
+		Image github = new Image("/github.png");
+		Facebook1.setFill(new ImagePattern(facebook));
+		Facebook2.setFill(new ImagePattern(facebook));
+		GitHub1.setFill(new ImagePattern(github));
+		GitHub2.setFill(new ImagePattern(github));
 	}
 }
