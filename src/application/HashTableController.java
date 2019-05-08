@@ -88,6 +88,10 @@ public class HashTableController implements Initializable {
 					in(9, number, 541); break;
 				}
 			} else {
+				int index = splitInt(number);
+				Label label = hash[index].get(counts);
+				label.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(90), Insets.EMPTY)));
+				label.setTextFill(Color.WHITE);
 				indexlb.setText("Exists");
 				inserttf.clear();
 			}
