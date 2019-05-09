@@ -2,11 +2,13 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 import com.sun.javafx.image.impl.ByteIndexed.Getter;
 
 import application.MainController;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,31 +23,23 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-public class ArrayListController extends Application implements Initializable {
+public class ArrayListController extends Application{
 
-	String num = null;
-	StackPane newPane = new StackPane();
+	String value = null;
 	public String getNum() {
-		return num;
+		return value;
 	}
 
-	public void setNum(String num) {
-		this.num = num;
+	public void setNum(String value) {
+		this.value = value;
 	}
 
-	MainController a = new MainController();
-	ArrayList<String> newlist = new ArrayList<String>();
-	ArrayList<StackPane> newPaneList = new ArrayList<StackPane>();
-//	ArrayList<Text> newText = new ArrayList<Text>();
-//	public void getData() {
-//		for(int i=0; i<a.newlist.size(); i++) {
-//			newlist.add(a.newlist.get(i));
-//		}
-//		System.out.println(newlist);
-//	}
-	
-	
+	//LinkedList<StackPane> listPane = new LinkedList<StackPane>();
+	ArrayList<StackPane> listPane = new ArrayList<StackPane>();
+	@FXML
+	private TextField statusText;
 	@FXML
 	private TextField valueAddField;
 	@FXML 
@@ -55,13 +49,15 @@ public class ArrayListController extends Application implements Initializable {
 		btnAddItem.setStyle("-fx-background-color: #DD5656");
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
-		num = valueAddField.getText();
-		//System.out.println(num);
-		newlist.add(valueAddField.getText());
-//		for (int i=0; i<newlist.size(); i++)
-//			System.out.print(newlist.get(i)+",");
-		//System.out.println();
+		value = valueAddField.getText();
+		StackPane obj = createShape(value);
+		listPane.add(obj);
+		setListPane(listPane);
+		arrayListPane.getChildren().add(obj);
+		int y = listPane.size()-1;
+		getWay(obj, y);
 		valueAddField.clear();
+		statusText.setText("Done!");
 	}
 	
 	@FXML
@@ -75,16 +71,33 @@ public class ArrayListController extends Application implements Initializable {
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #DD5656");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
-		newlist.add(Integer.parseInt(indexInsertField.getText()) , valueInsertField.getText());
-		for (int i=0; i<newlist.size(); i++)
-			System.out.print(newlist.get(i)+",");
-		System.out.println();
+		value = valueInsertField.getText();
+		int index = Integer.parseInt(indexInsertField.getText());
+		if (index > listPane.size()) statusText.setText("Wrong index!");
+		else {
+			StackPane obj = createShape(value);
+			if (index == 0) {
+				for (int i=0; i<listPane.size(); i++) {
+					goDown(listPane.get(i), i);	
+				}
+			}
+			else if (index > 0) {
+				for (int i=index; i<listPane.size(); i++) {
+					goDown(listPane.get(i), i-index+1);
+				}
+			}
+			arrayListPane.getChildren().add(obj);
+			getWay(obj, index);
+			listPane.add(index, obj);
+			statusText.setText(""+listPane.size());
+		}
+		
 		valueInsertField.clear();
 		indexInsertField.clear();
 	}
 	
 	@FXML
-	private TextField valueDeleteField;
+	private TextField indexDeleteField;
 	@FXML 
 	public Button btnDeleteItem;
 	@FXML
@@ -92,12 +105,34 @@ public class ArrayListController extends Application implements Initializable {
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #DD5656");
-		newlist.remove(Integer.parseInt(valueDeleteField.getText()));
-		for (int i=0; i<newlist.size(); i++)
-			System.out.print(newlist.get(i)+",");
-		System.out.println();
-		valueDeleteField.clear();
+		int index = Integer.parseInt(indexDeleteField.getText());
+		if (index > listPane.size()) statusText.setText("Wrong index!");
+		else {
+			statusText.setText("Done!");
+			if (index == 0) {
+				for (int i=index+1; i<listPane.size(); i++) {
+					goUp(listPane.get(i), i-1);	
+				}
+			}
+			else if (index > 0){
+				for (int i=index; i<listPane.size(); i++) {
+					goUp(listPane.get(i), i-index);
+				}
+			}
+			arrayListPane.getChildren().remove(listPane.get(index));
+			listPane.remove(index);
+			//setListPane(listPane);
+		}
+		indexDeleteField.clear();
 	}
+	public ArrayList<StackPane> getListPane() {
+		return listPane;
+	}
+
+	public void setListPane(ArrayList<StackPane> listPane) {
+		this.listPane = listPane;
+	}
+
 	@FXML
 	private AnchorPane arrayListPane;
 	@FXML
@@ -107,24 +142,43 @@ public class ArrayListController extends Application implements Initializable {
 	}
 
 	public StackPane createShape(String num) {
-		//getData();
-		if (num != null) {
 			Rectangle obj = new Rectangle();
 			obj.setFill(Color.GREENYELLOW);
-			obj.setHeight(87);
-			obj.setWidth(81);
-//			String tet = newlist.get(newlist.size()-1);
-//			System.out.println(tet);
+			obj.setHeight(90);
+			obj.setWidth(80);
 			Text text = new Text();
 			text.setText(num);
-			System.out.println(num);
 			StackPane stack = new StackPane();
 			stack.getChildren().addAll(obj, text);
-			stack.setLayoutX(396);
-			stack.setLayoutY(59);
+			stack.setLayoutX(400);
+			stack.setLayoutY(60);
 			return stack;
-		}
-		return null;
+	}
+	
+	public void getWay(StackPane stack, int y) {
+		TranslateTransition way =  new TranslateTransition();
+		way.setDuration(Duration.seconds(2));
+		way.setToX(400);
+		way.setToY(-30 + y*95);
+		way.setNode(stack);
+		way.play();
+		System.out.println("Done");
+	}
+	
+	public void goDown(StackPane stack, int y) {
+		TranslateTransition way = new TranslateTransition();
+		way.setDuration(Duration.seconds(0.5));
+		way.setToY(65+y*95);
+		way.setNode(stack);
+		way.play();
+	}
+	
+	public void goUp(StackPane stack, int y) {
+		TranslateTransition way = new TranslateTransition();
+		way.setDuration(Duration.seconds(1));
+		way.setToY(y*95-30);
+		way.setNode(stack);
+		way.play();
 	}
 	
 	@Override
@@ -132,8 +186,7 @@ public class ArrayListController extends Application implements Initializable {
 		
 		try {
 			AnchorPane root = FXMLLoader.load(getClass().getResource("ArrayList.fxml"));
-			Scene scene = new Scene(root,1100,800);
-			root.getChildren().add(newPane);
+			Scene scene = new Scene(root,1000,600);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
@@ -145,9 +198,4 @@ public class ArrayListController extends Application implements Initializable {
 		launch(args);
 	}
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		newPane = createShape(num);
-		
-	}
 }
