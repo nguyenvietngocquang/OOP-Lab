@@ -26,23 +26,32 @@
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
                <cursor>
-                  <Cursor fx:constant="NONE" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
             <Button fx:id="btnInsertItem" layoutX="89.0" layoutY="182.0" mnemonicParsing="false" onAction="#insertItem" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #60d92e;" text="Insert Item" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnDeleteItem" layoutX="89.0" layoutY="331.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #60d92e;" text="Delete Item" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="16.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button layoutX="175.0" layoutY="542.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="127.0" style="-fx-background-color: #DD5656;" text="Back" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label layoutX="137.0" layoutY="235.0" text="Index:" textFill="#fffefe">
                <font>
@@ -50,16 +59,19 @@
                </font>
             </Label>
             <Label layoutX="162.0" layoutY="279.0" text="Value:" textFill="WHITE" />
-            <TextField fx:id="indexInsertField" layoutX="190.0" layoutY="231.0" prefHeight="0.0" prefWidth="97.0" />
-            <TextField fx:id="valueInsertField" layoutX="207.0" layoutY="274.0" prefHeight="21.0" prefWidth="97.0" />
+            <TextField fx:id="indexInsertField" layoutX="190.0" layoutY="231.0" onKeyPressed="#insertEnter" prefHeight="0.0" prefWidth="97.0" />
+            <TextField fx:id="valueInsertField" layoutX="207.0" layoutY="274.0" onKeyPressed="#insertEnter" prefHeight="21.0" prefWidth="97.0" />
             <Label layoutX="138.0" layoutY="383.0" text="Index:" textFill="#fffefe">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="indexDeleteField" layoutX="190.0" layoutY="379.0" prefHeight="0.0" prefWidth="97.0" />
-            <TextField fx:id="valueAddField" layoutX="190.0" layoutY="127.0" prefHeight="21.0" prefWidth="97.0" />
-            <Label layoutX="141.0" layoutY="132.0" text="Value:" textFill="WHITE" />
+            <TextField fx:id="indexDeleteField" layoutX="190.0" layoutY="379.0" onKeyPressed="#deleteEnter" prefHeight="0.0" prefWidth="97.0" />
+            <TextField fx:id="valueAddField" layoutX="190.0" layoutY="127.0" onKeyPressed="#addEnter" prefHeight="21.0" prefWidth="97.0" />
+            <Label layoutX="141.0" layoutY="132.0" text="Value:" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="15.0" />
+               </font></Label>
             <Label alignment="CENTER" layoutX="89.0" layoutY="427.0" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: #F8E239; -fx-background-radius: 2em;" text="Status" textFill="#355664">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="16.0" />
