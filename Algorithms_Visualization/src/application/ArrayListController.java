@@ -91,7 +91,22 @@ public class ArrayListController extends Application{
 			listPane.add(index, obj);
 			statusText.setText(""+listPane.size());
 		}
-		
+		StackPane obj = createShape(value);
+		listPane.add(index, obj);
+		setListPane(listPane);
+		arrayListPane.getChildren().add(obj);
+		if (index == 0) {
+			for (int i=0; i<listPane.size(); i++) {
+				goDown(listPane.get(i), i-1);	
+			}
+		}
+		else if (index == (listPane.size()-1)) goDown(listPane.get(index+1), 1);
+		else {
+			for (int i=index; i<listPane.size(); i++) {
+				goDown(listPane.get(i), i-index);
+			}
+		}
+		getWay(obj, index);
 		valueInsertField.clear();
 		indexInsertField.clear();
 	}
@@ -128,7 +143,6 @@ public class ArrayListController extends Application{
 	public ArrayList<StackPane> getListPane() {
 		return listPane;
 	}
-
 	public void setListPane(ArrayList<StackPane> listPane) {
 		this.listPane = listPane;
 	}
