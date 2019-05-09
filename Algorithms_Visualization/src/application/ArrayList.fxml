@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -23,6 +25,9 @@
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
             </Button>
             <Button fx:id="btnInsertItem" layoutX="89.0" layoutY="182.0" mnemonicParsing="false" onAction="#insertItem" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #60d92e;" text="Insert Item" textFill="WHITE">
                <font>

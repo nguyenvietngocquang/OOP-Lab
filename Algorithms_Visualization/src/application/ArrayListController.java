@@ -50,14 +50,17 @@ public class ArrayListController extends Application{
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
 		value = valueAddField.getText();
-		StackPane obj = createShape(value);
-		listPane.add(obj);
-		setListPane(listPane);
-		arrayListPane.getChildren().add(obj);
-		int y = listPane.size()-1;
-		getWay(obj, y);
-		valueAddField.clear();
-		statusText.setText("Done!");
+		if (valueAddField.getText().isEmpty()) statusText.setText("Invalid");
+		else {
+			StackPane obj = createShape(value);
+			listPane.add(obj);
+			setListPane(listPane);
+			arrayListPane.getChildren().add(obj);
+			int y = listPane.size()-1;
+			getWay(obj, y);
+			valueAddField.clear();
+			statusText.setText("Done!");
+		}
 	}
 	
 	@FXML
@@ -71,44 +74,31 @@ public class ArrayListController extends Application{
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #DD5656");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
-		value = valueInsertField.getText();
-		int index = Integer.parseInt(indexInsertField.getText());
-		if (index > listPane.size()) statusText.setText("Wrong index!");
+		if (valueInsertField.getText().isEmpty() || indexInsertField.getText().isEmpty()) statusText.setText("Invalid");
 		else {
-			StackPane obj = createShape(value);
-			if (index == 0) {
-				for (int i=0; i<listPane.size(); i++) {
-					goDown(listPane.get(i), i);	
+			value = valueInsertField.getText();
+			int index = Integer.parseInt(indexInsertField.getText());
+			if (index > listPane.size()) statusText.setText("Wrong index!");
+			else {
+				StackPane obj = createShape(value);
+				if (index == 0) {
+					for (int i=0; i<listPane.size(); i++) {
+						goDown(listPane.get(i), i);	
+					}
 				}
-			}
-			else if (index > 0) {
-				for (int i=index; i<listPane.size(); i++) {
-					goDown(listPane.get(i), i-index+1);
+				else if (index > 0) {
+					for (int i=index; i<listPane.size(); i++) {
+						goDown(listPane.get(i), i-index+1);
+					}
 				}
+				arrayListPane.getChildren().add(obj);
+				getWay(obj, index);
+				listPane.add(index, obj);
+				statusText.setText(""+listPane.size());
 			}
-			arrayListPane.getChildren().add(obj);
-			getWay(obj, index);
-			listPane.add(index, obj);
-			statusText.setText(""+listPane.size());
+			valueInsertField.clear();
+			indexInsertField.clear();
 		}
-		StackPane obj = createShape(value);
-		listPane.add(index, obj);
-		setListPane(listPane);
-		arrayListPane.getChildren().add(obj);
-		if (index == 0) {
-			for (int i=0; i<listPane.size(); i++) {
-				goDown(listPane.get(i), i-1);	
-			}
-		}
-		else if (index == (listPane.size()-1)) goDown(listPane.get(index+1), 1);
-		else {
-			for (int i=index; i<listPane.size(); i++) {
-				goDown(listPane.get(i), i-index);
-			}
-		}
-		getWay(obj, index);
-		valueInsertField.clear();
-		indexInsertField.clear();
 	}
 	
 	@FXML
@@ -120,25 +110,27 @@ public class ArrayListController extends Application{
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #DD5656");
-		int index = Integer.parseInt(indexDeleteField.getText());
-		if (index > listPane.size()) statusText.setText("Wrong index!");
+		if (indexDeleteField.getText().isEmpty()) statusText.setText("Invalid!");
 		else {
-			statusText.setText("Done!");
-			if (index == 0) {
-				for (int i=index+1; i<listPane.size(); i++) {
-					goUp(listPane.get(i), i-1);	
+			int index = Integer.parseInt(indexDeleteField.getText());
+			if (index > listPane.size()) statusText.setText("Wrong index!");
+			else {
+				statusText.setText("Done!");
+				if (index == 0) {
+					for (int i=index+1; i<listPane.size(); i++) {
+						goUp(listPane.get(i), i-1);	
+					}
 				}
-			}
-			else if (index > 0){
-				for (int i=index; i<listPane.size(); i++) {
-					goUp(listPane.get(i), i-index);
+				else if (index > 0){
+					for (int i=index; i<listPane.size(); i++) {
+						goUp(listPane.get(i), i-index);
+					}
 				}
+				arrayListPane.getChildren().remove(listPane.get(index));
+				listPane.remove(index);
 			}
-			arrayListPane.getChildren().remove(listPane.get(index));
-			listPane.remove(index);
-			//setListPane(listPane);
+			indexDeleteField.clear();
 		}
-		indexDeleteField.clear();
 	}
 	public ArrayList<StackPane> getListPane() {
 		return listPane;
