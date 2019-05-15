@@ -58,16 +58,19 @@
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="162.0" layoutY="279.0" text="Value:" textFill="WHITE" />
-            <TextField fx:id="indexInsertField" layoutX="190.0" layoutY="231.0" onKeyPressed="#insertEnter" prefHeight="0.0" prefWidth="97.0" />
-            <TextField fx:id="valueInsertField" layoutX="207.0" layoutY="274.0" onKeyPressed="#insertEnter" prefHeight="21.0" prefWidth="97.0" />
+            <Label layoutX="162.0" layoutY="279.0" text="Value:" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="15.0" />
+               </font></Label>
+            <TextField fx:id="indexInsertField" layoutX="190.0" layoutY="231.0" onAction="#insertItem" prefHeight="0.0" prefWidth="97.0" />
+            <TextField fx:id="valueInsertField" layoutX="207.0" layoutY="274.0" onAction="#insertItem" prefHeight="21.0" prefWidth="97.0" />
             <Label layoutX="138.0" layoutY="383.0" text="Index:" textFill="#fffefe">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="indexDeleteField" layoutX="190.0" layoutY="379.0" onKeyPressed="#deleteEnter" prefHeight="0.0" prefWidth="97.0" />
-            <TextField fx:id="valueAddField" layoutX="190.0" layoutY="127.0" onKeyPressed="#addEnter" prefHeight="21.0" prefWidth="97.0" />
+            <TextField fx:id="indexDeleteField" layoutX="190.0" layoutY="379.0" onAction="#deleteItem" prefHeight="0.0" prefWidth="97.0" />
+            <TextField fx:id="valueAddField" layoutX="190.0" layoutY="127.0" onAction="#addItem" prefHeight="21.0" prefWidth="97.0" />
             <Label layoutX="141.0" layoutY="132.0" text="Value:" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
