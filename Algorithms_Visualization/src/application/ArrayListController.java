@@ -8,8 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -29,7 +28,7 @@ public class ArrayListController extends Application{
 	}
 	ArrayList<StackPane> listPane = new ArrayList<StackPane>();
 	@FXML
-	private TextField statusText;
+	private Label statusText;
 	@FXML
 	private TextField valueAddField;
 	@FXML 
@@ -37,7 +36,6 @@ public class ArrayListController extends Application{
 	
 	@FXML
 	public void addItem(ActionEvent event) {
-		statusText.clear();
 		btnAddItem.setStyle("-fx-background-color: #DD5656");
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
@@ -63,11 +61,14 @@ public class ArrayListController extends Application{
 	public Button btnInsertItem;
 	@FXML
 	public void insertItem(ActionEvent event) {
-		statusText.clear();
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #DD5656");
 		btnDeleteItem.setStyle("-fx-background-color: #60d92e");
-		if (indexInsertField.getText().isEmpty()) statusText.setText("Invalid Index");
+		if (indexInsertField.getText().isEmpty() || isInt(indexInsertField.getText()) == false) {
+			statusText.setText("Invalid Index");
+			indexInsertField.clear();
+			valueInsertField.clear();
+		}
 		else {
 			if (valueInsertField.getText().isEmpty()) statusText.setText("Invalid Value");
 			else {
@@ -96,21 +97,26 @@ public class ArrayListController extends Application{
 	public Button btnDeleteItem;
 	@FXML
 	public void deleteItem(ActionEvent event) {
-		statusText.clear();
 		btnAddItem.setStyle("-fx-background-color: #60d92e");
 		btnInsertItem.setStyle("-fx-background-color: #60d92e");
 		btnDeleteItem.setStyle("-fx-background-color: #DD5656");
-		if (indexDeleteField.getText().isEmpty()) statusText.setText("Invalid!");
+		if (indexDeleteField.getText().isEmpty() || isInt(indexDeleteField.getText()) == false ) {
+			statusText.setText("Invalid!");
+			indexDeleteField.clear();
+		}
 		else {
 			int index = Integer.parseInt(indexDeleteField.getText());
-			if (index > listPane.size()) statusText.setText("Wrong index!");
+			if (index > listPane.size()  ) {
+				statusText.setText("Wrong index!");
+				indexDeleteField.clear();
+			}
 			else {
-				statusText.setText(listPane.get(index) + " was deleted!");
+				arrayListPane.getChildren().remove(listPane.get(index));
+				listPane.remove(index);
+				statusText.setText("Done!");
 				for (int i=index; i<listPane.size(); i++) {
 					goUp(listPane.get(i));
 				}
-				arrayListPane.getChildren().remove(listPane.get(index));
-				listPane.remove(index);
 			}
 			indexDeleteField.clear();
 		}
@@ -152,7 +158,6 @@ public class ArrayListController extends Application{
 		way.setToY(-30 + y*95);
 		way.setNode(stack);
 		way.play();
-		System.out.println("Done");
 	}
 	
 	public void goDown(StackPane stack) {
@@ -166,11 +171,18 @@ public class ArrayListController extends Application{
 	public void goUp(StackPane stack) {
 		TranslateTransition way = new TranslateTransition();
 		way.setDuration(Duration.seconds(1));
-		way.setByY(65);
+		way.setByY(-95);
 		way.setNode(stack);
 		way.play();
 	}
 	
+	static boolean isInt(String str) {
+		for (int i=0; i<str.length(); i++) {
+			if ((i==0) && (str.charAt(i) == '-')) continue;
+			if (!Character.isDigit(str.charAt(i))) return false;
+		}
+		return true;
+	}
 	@Override
 	public void start(Stage primaryStage) {
 		
