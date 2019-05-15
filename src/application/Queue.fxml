@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
@@ -22,16 +23,19 @@
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <TextField fx:id="entf" layoutX="260.0" layoutY="180.0" onAction="#enqueue" prefHeight="30.0" prefWidth="100.0" promptText="Input" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="180.0">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-            <Label fx:id="delb" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="310.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="310.0">
+            <Label fx:id="delb" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="310.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: WHITE; -fx-background-radius: 5;" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="310.0">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font></Label>
-            <Label fx:id="qty" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="430.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: WHITE;" text="0" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="430.0">
+            <Label fx:id="qty" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="430.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: WHITE; -fx-background-radius: 5;" text="0" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="430.0">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font></Label>
@@ -44,18 +48,24 @@
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button layoutX="120.0" layoutY="260.0" mnemonicParsing="false" onAction="#dequeue" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: YELLOW;" text="Dequeue" textFill="RED" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="260.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="Value:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="180.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="390.0" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: ORANGE; -fx-background-radius: 2em;" text="Quantity" textAlignment="CENTER" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="390.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="385.0" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: ORANGE; -fx-background-radius: 2em;" text="Quantity" textAlignment="CENTER" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="385.0">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="17.0" />
                </font>

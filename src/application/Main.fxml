@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -16,21 +17,33 @@
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="180.0" mnemonicParsing="false" onAction="#arraylist" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: WHITE; -fx-border-radius: 20 20 20 20;" text="Array List" textFill="#fffefe" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="180.0">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="240.0" mnemonicParsing="false" onAction="#hashtable" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: WHITE; -fx-border-radius: 20 20 20 20;" text="Hash Table" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="240.0">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #DD5656; -fx-background-radius: 20 20 20 20; -fx-border-color: WHITE; -fx-border-radius: 20 20 20 20;" text="Exit" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="300.0">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="40.0" text="ALGORITHMS" textAlignment="CENTER" textFill="#dd5656" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
                <font>
@@ -83,21 +96,33 @@
             <Button contentDisplay="GRAPHIC_ONLY" layoutX="204.0" layoutY="530.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#goFacebook1" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F9E79F; -fx-background-radius: 2em;" text="Button" AnchorPane.leftAnchor="204.0" AnchorPane.topAnchor="530.0">
                <graphic>
                   <Rectangle fx:id="Facebook1" arcHeight="5.0" arcWidth="5.0" height="40.0" stroke="#f9e79f" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="40.0" />
-               </graphic></Button>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button contentDisplay="GRAPHIC_ONLY" layoutX="554.0" layoutY="530.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#goFacebook2" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F9E79F; -fx-background-radius: 2em;" text="Button" AnchorPane.leftAnchor="554.0" AnchorPane.topAnchor="530.0">
                <graphic>
                   <Rectangle fx:id="Facebook2" arcHeight="5.0" arcWidth="5.0" height="40.0" stroke="#f9e79f" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="40.0" />
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button contentDisplay="GRAPHIC_ONLY" layoutX="277.0" layoutY="530.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#goGitHub1" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F9E79F; -fx-background-radius: 2em;" text="Button" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="530.0">
                <graphic>
                   <Rectangle fx:id="GitHub1" arcHeight="5.0" arcWidth="5.0" height="40.0" stroke="#f9e79f" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="40.0" />
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="530.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#goGitHub2" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F9E79F; -fx-background-radius: 2em;" text="Button" AnchorPane.leftAnchor="627.0" AnchorPane.topAnchor="530.0">
                <graphic>
                   <Rectangle fx:id="GitHub2" arcHeight="5.0" arcWidth="5.0" height="40.0" stroke="#f9e79f" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="40.0" />
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </AnchorPane>
