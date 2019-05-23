@@ -1,4 +1,5 @@
 package application;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class ArrayListController extends Application{
+public class ArrayListController extends Application {
 
 	String value = null;
 	public String getNum() {
@@ -183,6 +184,7 @@ public class ArrayListController extends Application{
 		}
 		return true;
 	}
+	
 	@Override
 	public void start(Stage primaryStage) {
 		
@@ -200,5 +202,4 @@ public class ArrayListController extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 }

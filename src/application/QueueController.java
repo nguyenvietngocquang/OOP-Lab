@@ -1,15 +1,12 @@
 package application;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.LinkedList;
-import java.util.ResourceBundle;
 
 import javafx.animation.PathTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -24,7 +21,7 @@ import javafx.scene.shape.Polyline;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
 
-public class QueueController implements Initializable {
+public class QueueController {
 	
 	private LinkedList<Label> queue = new LinkedList<Label>();
 	
@@ -189,10 +186,5 @@ public class QueueController implements Initializable {
 			if (!Character.isDigit(str.charAt(i))) return false;
 		}
 		return true;
-	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
 	}
 }

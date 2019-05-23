@@ -1,14 +1,11 @@
 package application;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.LinkedList;
-import java.util.ResourceBundle;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -26,7 +23,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
 
-public class HashTableController implements Initializable {
+public class HashTableController {
 	
 	private LinkedList<Label>[] hash = new LinkedList[10];
 	private LinkedList<Line>[] line = new LinkedList[10];
@@ -341,10 +338,5 @@ public class HashTableController implements Initializable {
 			if (!Character.isDigit(str.charAt(i))) return false;
 		}
 		return true;
-	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
 	}
 }
